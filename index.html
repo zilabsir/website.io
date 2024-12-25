@@ -15,97 +15,62 @@
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(180deg, #87CEFA, #00BFFF); /* Clear sky gradient */
-            overflow-x: hidden;
-            position: relative;
-            min-height: 100vh;
+            background-color: #f9f9f9;
         }
-
-        /* Animations */
-        @keyframes cloudMove {
-            0% { transform: translateX(-100%); }
-            100% { transform: translateX(100%); }
+        a {
+            color: #1a73e8;
+            text-decoration: none;
         }
-
-        /* Clouds */
-        .clouds {
-            position: absolute;
-            top: 20%;
-            left: -100%;
-            width: 200%;
-            height: 100px;
-            background-image: url('https://www.transparenttextures.com/patterns/clouds.png');
-            animation: cloudMove 60s linear infinite;
+        a:hover {
+            text-decoration: underline;
         }
-
+        /* Container */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px 0;
+        }
         /* Header */
         .header {
             text-align: center;
-            padding: 100px 0;
-            background-color: rgba(0, 47, 255, 0.8); /* Dark blue sky */
-            color: white;
-            border-radius: 10px;
-            animation: fadeIn 2s ease-out;
+            padding: 50px 0;
+            background: #1a73e8;
+            color: #fff;
         }
-
         .header h1 {
-            font-size: 4em;
+            font-size: 3em;
             margin-bottom: 10px;
-            animation: fadeIn 3s ease-out;
         }
-
         .header p {
-            font-size: 1.5em;
-            margin-bottom: 30px;
-            opacity: 0;
-            animation: fadeIn 4s ease-out;
-            animation-delay: 1s;
+            font-size: 1.2em;
         }
-
         /* Navigation */
         .nav {
             display: flex;
             justify-content: center;
             margin-top: 20px;
-            animation: slideIn 3s ease-out;
         }
-
         .nav a {
-            margin: 0 20px;
-            font-size: 1.2em;
+            margin: 0 15px;
+            font-size: 1em;
             color: #fff;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            padding: 10px;
-            transition: color 0.3s ease;
         }
-
-        .nav a:hover {
-            color: #FFD700; /* Gold */
-        }
-
         /* Sections */
         section {
-            padding: 80px 0;
+            padding: 60px 0;
             border-bottom: 1px solid #ddd;
-            animation: fadeInUp 2s ease-out;
         }
-
         section:last-of-type {
             border-bottom: none;
         }
-
         .section-title {
             text-align: center;
-            font-size: 2.5em;
+            font-size: 2em;
             margin-bottom: 30px;
             position: relative;
             display: inline-block;
-            opacity: 0;
-            animation: fadeInUp 2s ease-out;
-            animation-delay: 0.5s;
         }
-
         .section-title::after {
             content: '';
             width: 50px;
@@ -116,126 +81,71 @@
             bottom: -10px;
             transform: translateX(-50%);
         }
-
-        /* About Section */
+        /* About */
         .about-content {
             display: flex;
             flex-wrap: wrap;
             align-items: center;
             justify-content: center;
             gap: 20px;
-            opacity: 0;
-            animation: fadeInUp 2s ease-out;
-            animation-delay: 1s;
         }
-
         .about-content img {
-            width: 250px;
-            border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-            transition: transform 0.3s ease;
+            width: 200px;
+            border-radius: 10px;
         }
-
-        .about-content img:hover {
-            transform: scale(1.05);
-        }
-
         .about-content div {
             max-width: 600px;
-            font-size: 1.1em;
         }
-
-        /* Project Cards */
+        /* Projects */
         .projects {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            opacity: 0;
-            animation: fadeInUp 2s ease-out;
-            animation-delay: 1.5s;
+            gap: 20px;
         }
-
         .project-card {
             background: #fff;
             padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-        }
-
         .project-card h3 {
+            margin-bottom: 10px;
             color: #1a73e8;
-            margin-bottom: 15px;
         }
-
-        /* Founder Section */
+        .project-card p {
+            font-size: 0.95em;
+        }
+        /* Founder */
         .founder {
             display: flex;
             flex-wrap: wrap;
             align-items: center;
             justify-content: center;
             gap: 20px;
-            opacity: 0;
-            animation: fadeInUp 2s ease-out;
-            animation-delay: 2s;
         }
-
         .founder img {
             width: 200px;
             border-radius: 50%;
-            transition: transform 0.3s ease;
         }
-
-        .founder img:hover {
-            transform: scale(1.1);
-        }
-
         .founder div {
             max-width: 600px;
+        }
+        /* Contact */
+        .contact-info {
+            text-align: center;
+        }
+        .contact-info a {
+            display: block;
+            margin: 10px 0;
             font-size: 1.1em;
         }
-
         /* Footer */
         .footer {
             text-align: center;
             padding: 20px 0;
-            background: rgba(0, 47, 255, 0.8);
-            color: white;
+            background: #1a73e8;
+            color: #fff;
         }
-
-        /* Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
         /* Responsive */
         @media (max-width: 768px) {
             .about-content, .founder {
@@ -251,9 +161,6 @@
     </style>
 </head>
 <body>
-
-    <!-- Clouds -->
-    <div class="clouds"></div>
 
     <!-- Header -->
     <header class="header">
@@ -284,7 +191,48 @@
         <section id="projects">
             <h2 class="section-title">Our Projects</h2>
             <div class="projects">
-                <!-- Project Cards here... -->
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <h3>Voice-to-Voice Chatbot (Farsi)</h3>
+                    <p>Developed a sophisticated voice-to-voice chatbot capable of understanding and responding in Farsi. Available on GitHub.</p>
+                </div>
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <h3>Big Data Recommender System</h3>
+                    <p>Implemented a large-scale recommender system using TwoTower, DeepFM, and other advanced algorithms to provide personalized recommendations.</p>
+                </div>
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <h3>Healthy Food Recommendation System</h3>
+                    <p>Designed a system that suggests healthy food options based on nutritional knowledge and user dietary habits.</p>
+                </div>
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <h3>AI-Powered Data Preprocessing</h3>
+                    <p>Engineered big data preprocessing pipelines optimized for deep learning and machine learning applications.</p>
+                </div>
+                <!-- Project 5 -->
+                <div class="project-card">
+                    <h3>AI Monitoring for Home Appliance Manufacturers</h3>
+                    <p>Oversaw AI centers for major home appliance companies, analyzing AI platforms, patent searches, and benchmarking smart home products.</p>
+                </div>
+                <!-- Additional Projects -->
+                <div class="project-card">
+                    <h3>Food Recommender Telegram Bot</h3>
+                    <p>Developed a Telegram bot that recommends food items based on user preferences. Available on GitHub.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Language Model Fine-Tuning</h3>
+                    <p>Extracted features and identified named entities by fine-tuning language models for various applications.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Transformer-Based Translation Models</h3>
+                    <p>Built translation models using transformers, enhancing multilingual capabilities. Available on GitHub.</p>
+                </div>
+                <div class="project-card">
+                    <h3>User Opinion Analysis for E-commerce</h3>
+                    <p>Collected and analyzed user reviews from platforms like Digikala and Amazon to extract valuable insights. Available on GitHub.</p>
+                </div>
             </div>
         </section>
 
@@ -294,16 +242,38 @@
             <div class="founder">
                 <img src="https://via.placeholder.com/200" alt="Mohammad Abbasi">
                 <div>
-                    <p>Mohammad Abbasi is the founder and CEO of Zilabs.ir. With over 15 years of experience in technology and entrepreneurship, he has led Zilabs.ir to become one of the most innovative tech companies in the region.</p>
-                    <p>His passion for technology and solving complex problems has been the driving force behind the company's success.</p>
+                    <h3>Mohammad Abbasi</h3>
+                    <p>Mohammad Abbasi is the visionary founder of Zilabs.ir, bringing over a decade of experience in data science, artificial intelligence, and web development. With a strong academic background, including a Master's in Artificial Intelligence from the University of Isfahan, Mohammad has led numerous successful projects that leverage cutting-edge technologies to solve real-world problems.</p>
+                    <p>His passion for innovation and dedication to excellence have positioned Zilabs.ir as a trusted partner for businesses seeking to harness the power of data and AI.</p>
+                    <p>Connect with Mohammad:</p>
+                    <ul>
+                        <li>Email: <a href="mailto:absi1377@hotmail.com">absi1377@hotmail.com</a></li>
+                        <li>LinkedIn: <a href="https://www.linkedin.com/in/ma14ch" target="_blank">Mohammad Abbasi on LinkedIn</a></li>
+                        <li>GitHub: <a href="https://github.com/ma14ch" target="_blank">ma14ch</a></li>
+                    </ul>
                 </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-info">
+                <p>Website: <a href="http://zilabs.ir" target="_blank">http://zilabs.ir</a></p>
+                <p>Phone: +98 910 609 1633</p>
+                <p>Email: <a href="mailto:absi1377@hotmail.com">absi1377@hotmail.com</a></p>
+                <p>Follow us on:</p>
+                <p>
+                    <a href="https://www.linkedin.com/in/ma14ch" target="_blank">LinkedIn</a> | 
+                    <a href="https://github.com/ma14ch" target="_blank">GitHub</a>
+                </p>
             </div>
         </section>
     </div>
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2024 Zilabs.ir | All Rights Reserved</p>
+        <p>&copy; 2024 Zilabs.ir. All rights reserved.</p>
     </footer>
 
 </body>
